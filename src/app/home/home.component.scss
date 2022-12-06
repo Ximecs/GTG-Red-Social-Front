@@ -1,0 +1,171 @@
+.principalContainer{
+  height: 100%;
+}
+.userPhoto{
+  width: 15em;
+  position: absolute;
+  border-color: white;
+}
+
+.profileTop{
+  background-color:#E66808;
+  height: 10em;
+}
+.profileBottom{
+  background-color: white;
+  margin-bottom: 11em;
+}
+.profileName{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.7em;
+  text-align: center;
+}
+.transportName{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+  margin-top: -0.7em;
+}
+.cantPostName{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  text-align: center;
+  color: gray;
+}
+.cantPostNumber{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  text-align: center;
+}
+.cantFollower{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  text-align: center;
+  color: gray;
+}
+.cantFollowerNumber{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  text-align: center;
+}
+.viewProfile{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: center;
+  color: #E66808;
+}
+
+.userPhotoPost{
+  width: 7em;
+  position: inherit;
+}
+.userPhotoPost2{
+  width: 5em;
+  position: inherit;
+}
+
+.question{
+  background-color: #dedddd;
+  color: #7d7d7c;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  height: 3em;
+}
+.publication{
+  background-color:#E66808;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  height: 3em;
+  align-self: flex-end;
+}
+.colorBar{
+  background-color: #E66808;
+  height: 1em;
+}
+.namePost{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.3em;
+  text-align: left;
+}
+.timePublication{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 0.8em;
+  text-align: left;
+  color: #7d7d7c;
+}
+.publicationTime{
+  display: flex;
+  align-self: flex-start;
+  margin-top: -1em;
+}
+.iconTime{
+  width: 1em;
+  height: 1em;
+  color: #7d7d7c;
+}
+.tripName{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: left;
+  color: #000072;
+}
+.tittlePost{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  text-align: center;
+  color: #E66808;
+}
+.answersTripinformation{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  text-align: center;
+  color: #7d7d7c;
+  margin-top: -1.2em;
+}
+.limitTextHeight {
+  height: 13em;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+.textExperience{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+.buttonReadMore{
+  color: #E66808;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
+.tags{
+  display: inline;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  background-color: #dddada;
+  color: #8b8b8d;
+}
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg');
+  background-size: cover;
+}

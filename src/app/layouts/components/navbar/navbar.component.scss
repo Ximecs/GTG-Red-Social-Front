@@ -1,0 +1,45 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+}
+.navBar{
+  background: #e66808;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.imgLogo{
+  width: 200px;
+}
+
+@media (max-width:872px) {
+  .imgLogo {
+    display: none;
+    width: 80px;
+  
+  }
+}
+.name{
+  color: white;
+}
+.buttonSrc{
+  color:#e66808 ;
+  background: #e0e0e6;
+}
+.search{
+  width: 30%;
+}
+.icono {
+  color: white;
+}
+.iconoSrc{
+  color:#e66808 ;
+}
+.colProfile{
+  display: inline;
+}
