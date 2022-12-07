@@ -1,5 +1,6 @@
-.example-spacer {
-  flex: 1 1 auto;
+
+.buttonToggler{
+  background-color: #ffffff;
 }
 
 .avatar {
@@ -9,21 +10,31 @@
 }
 .navBar{
   background: #e66808;
-  display:flex;
-  flex-wrap: wrap;
-  flex-direction: column;
 }
 .imgLogo{
   width: 200px;
 }
 
+
 @media (max-width:872px) {
   .imgLogo {
     display: none;
     width: 80px;
-  
+  }
+ 
+}
+@media (max-width:1280px) {
+  .example-spacer{
+    display: none;
   }
 }
+@media (max-width:991px) {
+  .example-spacer{
+    display: none;
+  }
+}
+
+
 .name{
   color: white;
 }
@@ -32,7 +43,7 @@
   background: #e0e0e6;
 }
 .search{
-  width: 30%;
+  width: 70%;
 }
 .icono {
   color: white;
