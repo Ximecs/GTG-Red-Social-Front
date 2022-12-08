@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
+import { QuestionBoxComponent } from './question-box/question-box.component';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,13 @@ export class HomeComponent implements OnInit {
   openDialog(){
     this.dialog.open(DialogBoxComponent,{
       width:'100%',
+      height:'auto',
+      data: "right click"
+    })
+  }
+  openDialogQuestion(){
+    this.dialog.open(QuestionBoxComponent,{
+      width:'70%',
       height:'auto',
       data: "right click"
     })

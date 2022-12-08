@@ -14,9 +14,10 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import { ChooseFilComponent } from './choose-fil/choose-fil.component';
 import {MatListModule} from '@angular/material/list';
+import { QuestionBoxComponent } from './question-box/question-box.component';
 
 @NgModule({
-  declarations: [HomeComponent, DialogBoxComponent, ChooseFilComponent],
+  declarations: [HomeComponent, DialogBoxComponent, ChooseFilComponent, QuestionBoxComponent],
   imports: [CommonModule, MatBottomSheetModule, MatSelectModule, HomeRoutingModule, MatInputModule,MatCardModule,MatIconModule,MatButtonModule,MatDialogModule,MatFormFieldModule, MatListModule],
 })
 export class HomeModule {}
