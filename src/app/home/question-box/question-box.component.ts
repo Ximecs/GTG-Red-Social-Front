@@ -2,6 +2,8 @@ import { Component, OnInit,Inject } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {FormControl} from '@angular/forms';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
+import { CloseViewComponent } from '../close-view/close-view.component';
+
 
 @Component({
   selector: 'app-question-box',
@@ -12,16 +14,17 @@ export class QuestionBoxComponent implements OnInit {
 
    ngOnInit(): void {
   }
-  constructor(
+  constructor(public dialog: MatDialog,
     public dialogRef: MatDialogRef<QuestionBoxComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _bottomSheet: MatBottomSheet) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
-    console.log(this.data);
-  }
-
-  disableSelect = new FormControl(false);
+   
+    openCancellLog(){
+      this.dialog.open(CloseViewComponent,{
+        width:'10%',
+        height:'auto',
+        data: "right click"
+      })
+    }
 
 }

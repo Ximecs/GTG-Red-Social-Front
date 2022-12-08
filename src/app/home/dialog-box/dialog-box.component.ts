@@ -3,6 +3,7 @@ import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog
 import {FormControl} from '@angular/forms';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
 import { ChooseFilComponent } from '../choose-fil/choose-fil.component';
+import { CloseViewComponent } from '../close-view/close-view.component';
 
 @Component({
   selector: 'app-dialog-box',
@@ -14,18 +15,22 @@ ngOnInit(): void {
   
 }
 
-  constructor(
+  constructor(public dialog: MatDialog,
     public dialogRef: MatDialogRef<DialogBoxComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _bottomSheet: MatBottomSheet) {}
+   
+    openCancellLog(){
+      this.dialog.open(CloseViewComponent,{
+        width:'100%',
+        height:'auto',
+        data: "right click"
+      })
+    }
 
-  onNoClick(): void {
-    this.dialogRef.close();
-    console.log(this.data);
-  }
+  
   openBottomSheet(): void {
     this._bottomSheet.open(ChooseFilComponent);//open FILE
   }
 
-  disableSelect = new FormControl(false);
 }
