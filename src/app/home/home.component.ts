@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
+  openDialog(){
+    this.dialog.open(DialogBoxComponent,{
+      width:'100%',
+      height:'auto',
+      data: "right click"
+    })
+  }
 
   ngOnInit(): void {
   }
@@ -15,5 +24,6 @@ export class HomeComponent implements OnInit {
     this.isReadMore = !this.isReadMore
  }
 isReadMore = true
+
 
 }
