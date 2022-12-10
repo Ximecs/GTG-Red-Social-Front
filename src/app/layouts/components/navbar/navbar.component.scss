@@ -8,11 +8,9 @@
   height: 50px;
   background-color: white;
 }
-.flex-container{
+.containerNavBar{
   background: #e66808;
-  display:flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+
 }
 .imgLogo{
   width: 200px;
@@ -48,7 +46,7 @@
   background: #e0e0e6;
 }
 .search{
-  width: 30%;
+  width: 140%;
 }
 .icono {
   color: white;
