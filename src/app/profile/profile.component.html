@@ -1,1 +1,144 @@
-<p>profile works!</p>
+<div class="justify-content-center principalContainer">
+    <!--container pricipal-->
+
+    <div class="banner row">
+        <img class="bannerImage border border-dark"
+            src="https://img.freepik.com/vector-premium/linea-cuadrada-brillante_1189-1600.jpg" alt="" width="100%">
+    </div>
+    <!--container banner-->
+
+    <div class="row  d-flex p-2  m-2 ">
+
+        <div class=" col-lg-3 col-md-3 col-sm-10  shadow-lg bg-light justify-content-center ">
+            <div class="profileImage justify-content-center">
+                <div class="row profileTop justify-content-center">
+                    <!--Profile Top - Naranja-->
+                    <div class="row justify-content-center mb-3 ">
+                        <!--imagen de perfil-->
+                        <img class="rounded-circle userPhoto img-fluid shadow border border-white "
+                            src="https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col m-5">
+                    <div class="row profileBotton2 justify-content-center ">
+                        <!--datos de usuario-->
+                        <h4 class="profileName ml-4">Ximena Combariza</h4>
+                        <!--Nombre Usuario-->
+                        <span class="transportName ml-4">Me transporto en Moto</span>
+                        <!--Medio de Transporte-->
+                    </div>
+                    <!--Fin Datos de usuario-->
+                    <hr>
+                    <div class="row">
+                        <!--Cant Publicaciones-->
+                        <h4 class="cantPostName">Publicaciones</h4>
+                        <span class="cantPostNumber">35</span>
+                    </div>
+                    <!--Fin Cant Publicaciones-->
+                    <hr>
+                    <div class="row">
+                        <!--Cant Seguidores-->
+                        <h4 class="cantFollower">Seguidores</h4>
+                        <span class="cantFollowerNumber mb-4">155</span>
+                    </div>
+                    <!--Fin Cant Seguidores-->
+                </div>
+
+            </div>
+        </div>
+
+
+         <div class="col-lg-5 col-md-3 ">
+
+            <div class="row bg-ligth border border-3 border-dark">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            </div>
+
+        <div class="row shadow-lg bg-light">
+            <div class="container-fluid">
+                <!--Post-->
+                <div class="row post mt-4 shadow">
+                    <mat-card class="col-lg-12 col-md-10 col-sm-5 mt-2 superiorInfoPost">
+                        <mat-card-header>
+                            <div mat-card-avatar class="example-header-image"></div>
+                            <mat-card-title class="namePost">Ximena Combariza</mat-card-title>
+                            <mat-card-subtitle class="publicationTime">
+                                <mat-icon class="iconTime">timelapse</mat-icon>
+                                <h3 class="timePublication">Tiempo de publicacion</h3>
+                            </mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image
+                            src="https://www.infobae.com/new-resizer/csdGxJidj9jpiH5TtbRtgViqcjM=/1200x628/filters:format(webp):quality(85)//cloudfront-us-east-1.images.arcpublishing.com/infobae/EJ4Y4ODTOFDOVJXKP4RLBRBUUI.jpg"
+                            alt="Photo">
+                        <mat-card-content>
+                            <div class="textExperience" [ngClass]="{'limitTextHeight': isReadMore}">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2 class="tripName mt-2">Viaje a San Andres</h2>
+                                    </div>
+                                </div>
+                                <div class="row row-cols-3 d-flex justify-content-center align-self-center">
+                                    <!--Titulos-->
+                                    <div class="col-lg-4 col-md-4 col-sm-2">
+                                        <h3 class="tittlePost">Transporte</h3>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-2">
+                                        <h3 class="tittlePost">Lugar de Viaje</h3>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-2">
+                                        <h3 class="tittlePost">Presupuesto</h3>
+                                    </div>
+                                </div>
+                                <div class="row row-cols-3 d-flex justify-content-center align-self-center ">
+                                    <!--Respuestas-->
+                                    <div class="col-lg-4 col-md-4 col-sm-2">
+                                        <h3 class="answersTripinformation">AviÛn</h3>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-2">
+                                        <h3 class="answersTripinformation">San Andres Islas</h3>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-2">
+                                        <h3 class="answersTripinformation">$$</h3>
+                                    </div>
+                                </div>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                galley of type and
+                                scrambled it to make a type specimen book. It has survived not only five centuries, but
+                                also the leap
+                                into electronic typesetting, remaining essentially unchanged. It was popularised in the
+                                1960s with the
+                                release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                desktop publishing
+                                software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </div>
+                            <button mat-button class="buttonReadMore" type="button" (click)="showText()">
+                                {{ isReadMore ? 'Leer m·s': 'Leer menos' }}</button>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-button>LIKE</button>
+                            <button mat-button>SHARE</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+            </div>
+
+
+            <hr>
+
+        </div>
+    </div>
+    
+    <div class="col-lg-2 col-md-3 col-sm-10 shadow-lg  bg-light">trhd col
+
+    </div>
+    </div>
+</div>

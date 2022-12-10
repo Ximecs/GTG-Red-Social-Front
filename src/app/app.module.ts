@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { PublicationsComponent } from './layouts/components/publications/publications/publications.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MatMenuModule } from '@angular/material/menu';
     NavbarComponent,
     FooterComponent,
     PageNotFoundComponent,
+    PublicationsComponent,
   ],
   imports: [
     BrowserModule,

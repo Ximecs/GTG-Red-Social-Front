@@ -11,5 +11,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  showText() { //leer más y leer menos texto experiencia
+    this.isReadMore = !this.isReadMore}
+    isReadMore = true
 }
