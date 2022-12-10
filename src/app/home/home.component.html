@@ -1,8 +1,8 @@
 <div class="completePage">
-  <div class="principalContainer container-fluid shadow d-flex mb-5 bg-white ">
-    <div class="mb-4"></div>
+  <div class="principalContainer container-fluid shadow d-flex p-3 mb-5 bg-white vh-100 ">
+    <div class="m-3"></div>
     <div class="row justify-content-center">
-      <div class=" col-12 col-lg-4 col-md-4 col-sm-10 m-2 shadow pb-3">
+      <div class="col-lg-4 col-md-4 col-sm-10 m-2 shadow pb-3">
         <!--profile content-->
         <div class="row profileTop justify-content-center">
           <!--Profile Top - Naranja-->
@@ -56,9 +56,9 @@
           </div>
           <!--Div imagen de post a post-->
           <div class="col-lg-6 col-md-6 col-sm-1 buttonsPost d-flex justify-content-end align-self-center">
-            <button mat-raised-button class="question me-1">a</button>
+            <button mat-raised-button class="question me-1" (click)="openDialogQuestion()">Hacer Pregunta</button>
             <!--Boton de pregunta-->
-            <button mat-raised-button class="publication ms-1">b</button>
+            <button mat-raised-button class="publication ms-1" (click)="openDialog()">Publicar viaje</button>
             <!--Boton de postear-->
           </div>
           <!--Botones del post-->

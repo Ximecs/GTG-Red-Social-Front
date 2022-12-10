@@ -1,47 +1,53 @@
 <!-- <div class="container-fluid d-flex justify-content-center"> -->
-<div class="">
-    <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid p-4 shadow justify-content-center align-items-center col-11">
-      <button class="navbar-toggler col-2" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <!-- <div class="row"> -->
+    <mat-toolbar class="navBar justify-content-center">
 
-      <a class="navbar-brand ms-5" href="#"><img src="https://cdn-icons-png.flaticon.com/128/1807/1807382.png" alt=""
-          style="width: 80%" /></a>
-
-      <button class="navbar-toggler col-2" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContentUser" aria-controls="navbarSupportedContentUser" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fa-solid fa-circle-user me-3 icon"></i>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">People</a>
-          </li>
-        </ul>
+      <div class="col-lg-3 col-md-3 col-sm-10">
+        <span>
+          <img class="imgLogo mb-1"
+            src="https://res.cloudinary.com/djfxxxa7q/image/upload/v1670197758/guide_to_go_recursos-logoLargo_kahdwr.png"
+            alt="">
+        </span>
       </div>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContentUser">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="icon" href="#"><i class="fa-solid fa-house me-3"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="icon" href="#"><i class="fa-solid fa-user me-3"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="icon" href="#"><i class="fa-solid fa-circle-user me-3"></i></a>
-          </li>
-        </ul>
+      <div class="col-3 input-group search">
+        <input type="search" class="form-control  " placeholder="Buscar" aria-label="Search"
+          aria-describedby="search-addon" />
+        <button mat-button class="buttonSrc border border-1 shadow-sm">
+          <mat-icon class="iconoSrc">search</mat-icon>
+        </button>
       </div>
-    </div>
-  </nav>
- </div> 
+      <div class="col-2 d-flex justify-content-end">
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon class="icono">home</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon class="icono">mail_outline</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon class="icono">people</mat-icon>
+        </button>
+      </div>
+      <!-- <div class="colProfile d-flex-inline col-4 ">  -->
+      <p class="name mt-2 mx-3">{{user.fullName}}</p>
+      <div class="avatar rounded-circle mx-2" [matMenuTriggerFor]="menu">
+        <img [src]="profile?.photoProfile || defaultAvatar" alt="" width="100%" height="100%">
+      </div>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="fileInput.click()">
+          <mat-icon>image</mat-icon>
+          <span>Change Photo</span>
+        </button>
+        <input hidden #fileInput type="file" id="myFile" name="filename" (change)="changePhoto($event)"
+          accept="image/*">
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+      <!-- </div> -->
+      <!-- <button mat-raised-button class="ms-2" (click)="logout()">Cerrar Sesíón</button> -->
+    </mat-toolbar>
+  <!-- </div> -->
 <!-- </div> -->

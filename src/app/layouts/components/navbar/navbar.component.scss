@@ -1,5 +1,6 @@
-.example-spacer {
-  flex: 1 1 auto;
+
+.buttonToggler{
+  background-color: #ffffff;
 }
 
 .avatar {
@@ -11,11 +12,7 @@
   background: #e66808;
   display:flex;
   flex-wrap: wrap;
-  display: inline;
-  flex-direction: row;
-}
-.navBar{
-  background: #e66808;
+  flex-direction: column;
 }
 .imgLogo{
   width: 200px;
@@ -23,13 +20,26 @@
   flex: 1;
 }
 
+
 @media (max-width:872px) {
   .imgLogo {
     display: none;
     width: 80px;
-  
+  }
+ 
+}
+@media (max-width:1280px) {
+  .example-spacer{
+    display: none;
   }
 }
+@media (max-width:991px) {
+  .example-spacer{
+    display: none;
+  }
+}
+
+
 .name{
   color: white;
 }
@@ -39,7 +49,6 @@
 }
 .search{
   width: 30%;
-  
 }
 .icono {
   color: white;
