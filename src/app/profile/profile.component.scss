@@ -1,25 +1,28 @@
+
 .principalContainer{
   height: 100%;
   width: 100%;
 
 }
-
 .userPhoto{
-  width: 15em;
+  width: 20em;
   position: absolute;
   border-color: white;
+  margin-top: -12em !important;
 }
 
 .profileTop{
-  background-color:#E66808;
+  //background-color:#E66808;
   height: 10em;
 }
 .profileBottom{
   background-color: white;
-  margin-bottom: 11em;
+  margin-bottom: 5em;
 }
 .profileContent{
-  height: 44em;
+  height: 38em;
+
+
 }
 .profileName{
   font-family: 'Poppins', sans-serif;
@@ -74,7 +77,7 @@
 }
 .userPhotoPost2{
   width: 5em;
-  position: inherit;
+  position: absolute;
 }
 
 .question{
@@ -175,3 +178,24 @@
   background-image: url('https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg');
   background-size: cover;
 }
+.banner{
+  width:100%;
+  word-wrap: break-word;
+  height:35em;
+  background-image: url('https://www.cindyparra.ink/wp-content/uploads/2021/04/portad-5.jpg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.settingsIcon{
+  width: 5em;
+  height: 5em;
+}
+.iconText{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.1em;
+  line-height: 1em;
+  color: #E66808;
+}
+

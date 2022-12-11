@@ -1,205 +1,240 @@
+<<<<<<< Updated upstream
+<p>profile works!</p>
+=======
 <div class="completePage">
-    <div class="principalContainer container-fluid shadow d-flex p-3 bg-white">
-      <div class="banner row">
-        <div class="col-lg-12">
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-4 col-md-4 col-sm-10 m-2 shadow pb-3 profileContent">
-          <!--profile content-->
-          <div class="row profileTop justify-content-center">
-            <!--Profile Top - Naranja-->
-            <div class="row justify-content-center mt-5">
-              <!--imagen de perfil-->
-              <img class="rounded-circle userPhoto img-fluid shadow p-2 border border-white"
-                src="https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
-                alt="">
-            </div>
-          </div>
-          <div class="row profileBottom justify-content-center"></div>
-          <div class="row profileBotton2 justify-content-center pe-3 ps-3">
-            <!--datos de usuario-->
-            <h4 class="profileName">Ximena Combariza</h4>
-            <!--Nombre Usuario-->
-            <span class="transportName">Me transporto en Moto</span>
-            <!--Medio de Transporte-->
-          </div>
-          <!--Fin Datos de usuario-->
-          <hr>
-          <div class="row">
-            <!--Cant Publicaciones-->
-            <h4 class="cantPostName">Publicaciones</h4>
-            <span class="cantPostNumber">35</span>
-          </div>
-          <!--Fin Cant Publicaciones-->
-          <hr>
-          <div class="row">
-            <!--Cant Seguidores-->
-            <h4 class="cantFollower">Seguidores</h4>
-            <span class="cantFollowerNumber">155</span>
-          </div>
-          <!--Fin Cant Seguidores-->
-          <hr>
-          <div class="row justify-content-center">
-            <button mat-button class="viewProfile">Ver perfil</button>
+  <div class="banner shadow col-lg-12"></div>
+  <div class="principalContainer container-fluid shadow d-flex p-3 bg-white">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-4 col-sm-10 m-2 shadow pb-3 profileContent">
+        <!--profile content-->
+        <div class="row profileTop justify-content-center">
+          <!--Profile Top - Naranja-->
+          <div class="row justify-content-center mt-5">
+            <!--imagen de perfil-->
+            <img class="rounded-circle userPhoto img-fluid shadow p-2 border border-white"
+              src="https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
+              alt="">
           </div>
         </div>
-        <!--Fin Profile content-->
-  
-        <div class="col-lg-7 col-md-7 col-sm-10 m-2 shadow m-1">
-          <!--Incio post content contenedor-->
-          <div class="row colorBar"></div>
-          <!--Post content color bar-->
-          <div class="row shadow ">
-            <!--Post a post container-->
-            <div class="col col-lg-2 col-md-2 col-sm-6 mb-2">
-              <img class="rounded-circle userPhotoPost shadow p-2 align-content-center"
-                src="https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
-                alt="">
-            </div>
-            <!--Div imagen de post a post-->
-            <div class="col-lg-6 col-md-6 col-sm-1 buttonsPost d-flex justify-content-end align-self-center">
-              <button mat-raised-button class="question me-1" (click)="openDialogQuestion()">Hacer Pregunta</button>
-              <!--Boton de pregunta-->
-              <button mat-raised-button class="publication ms-1" (click)="openDialog()">Publicar viaje</button>
-              <!--Boton de postear-->
-            </div>
-            <!--Botones del post-->
-          </div>
-  
-          <div class="container-fluid">
-            <!--Post-->
-            <div class="row post mt-4 shadow">
-              <mat-card class="col-lg-12 col-md-10 col-sm-5 mt-2 superiorInfoPost">
-                <mat-card-header>
-                  <div mat-card-avatar class="example-header-image"></div>
-                  <mat-card-title class="namePost">Ximena Combariza</mat-card-title>
-                  <mat-card-subtitle class="publicationTime">
-                    <mat-icon class="iconTime">timelapse</mat-icon>
-                    <h3 class="timePublication">Tiempo de publicacion</h3>
-                  </mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image
-                  src="https://www.infobae.com/new-resizer/csdGxJidj9jpiH5TtbRtgViqcjM=/1200x628/filters:format(webp):quality(85)//cloudfront-us-east-1.images.arcpublishing.com/infobae/EJ4Y4ODTOFDOVJXKP4RLBRBUUI.jpg"
-                  alt="Photo">
-                <mat-card-content>
-                  <div class="textExperience" [ngClass]="{'limitTextHeight': isReadMore}">
-                    <div class="row">
-                      <div class="col-12">
-                        <h2 class="tripName mt-2">Viaje a San Andres</h2>
-                      </div>
-                    </div>
-                    <div class="row row-cols-3 d-flex justify-content-center align-self-center">
-                      <!--Titulos-->
-                      <div class="col-lg-4 col-md-4 col-sm-2">
-                        <h3 class="tittlePost">Transporte</h3>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-2">
-                        <h3 class="tittlePost">Lugar de Viaje</h3>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-2">
-                        <h3 class="tittlePost">Presupuesto</h3>
-                      </div>
-                    </div>
-                    <div class="row row-cols-3 d-flex justify-content-center align-self-center ">
-                      <!--Respuestas-->
-                      <div class="col-lg-4 col-md-4 col-sm-2">
-                        <h3 class="answersTripinformation">AviÛn</h3>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-2">
-                        <h3 class="answersTripinformation">San Andres Islas</h3>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-2">
-                        <h3 class="answersTripinformation">$$</h3>
-                      </div>
-                    </div>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                    into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                    software like Aldus PageMaker including versions of Lorem Ipsum.
-                  </div>
-                  <button mat-button class="buttonReadMore" type="button" (click)="showText()">
-                    {{ isReadMore ? 'Leer m·s': 'Leer menos' }}</button>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button>LIKE</button>
-                  <button mat-button>SHARE</button>
-                </mat-card-actions>
-              </mat-card>
-            </div>
-          </div>
-          <!--FIN Estructura post-->
-  
-          <div class="container-fluid">
-            <!--Post-->
-            <div class="row post mt-4 shadow">
-              <mat-card class="col-lg-12 col-md-10 col-sm-5 mt-2 superiorInfoPost">
-                <mat-card-header>
-                  <div mat-card-avatar class="example-header-image"></div>
-                  <mat-card-title class="namePost">Ximena Combariza</mat-card-title>
-                  <mat-card-subtitle class="publicationTime">
-                    <mat-icon class="iconTime">timelapse</mat-icon>
-                    <h3 class="timePublication">Tiempo de publicacion</h3>
-                  </mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image
-                  src="https://www.infobae.com/new-resizer/csdGxJidj9jpiH5TtbRtgViqcjM=/1200x628/filters:format(webp):quality(85)//cloudfront-us-east-1.images.arcpublishing.com/infobae/EJ4Y4ODTOFDOVJXKP4RLBRBUUI.jpg"
-                  alt="Photo">
-                <mat-card-content>
-                  <div class="textExperience" [ngClass]="{'limitTextHeight': isReadMore}">
-                    <div class="row">
-                      <div class="col-12">
-                        <h2 class="tripName mt-2">Viaje a San Andres</h2>
-                      </div>
-                    </div>
-                    <div class="row row-cols-3 d-flex justify-content-center align-self-center">
-                      <!--Titulos-->
-                      <div class="col-lg-4 col-md-4 col-sm-2">
-                        <h3 class="tittlePost">Transporte</h3>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-2">
-                        <h3 class="tittlePost">Lugar de Viaje</h3>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-2">
-                        <h3 class="tittlePost">Presupuesto</h3>
-                      </div>
-                    </div>
-                    <div class="row row-cols-3 d-flex justify-content-center align-self-center ">
-                      <!--Respuestas-->
-                      <div class="col-lg-4 col-md-4 col-sm-2">
-                        <h3 class="answersTripinformation">AviÛn</h3>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-2">
-                        <h3 class="answersTripinformation">San Andres Islas</h3>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-2">
-                        <h3 class="answersTripinformation">$$</h3>
-                      </div>
-                    </div>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                    into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                    software like Aldus PageMaker including versions of Lorem Ipsum.
-                  </div>
-                  <button mat-button class="buttonReadMore" type="button" (click)="showText()">
-                    {{ isReadMore ? 'Leer m·s': 'Leer menos' }}</button>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button>LIKE</button>
-                  <button mat-button>SHARE</button>
-                </mat-card-actions>
-              </mat-card>
-            </div>
-          </div>
-          <!--FIN Estructura post-->
-  
-        </div><!-- </div> -->
-        <!-- </div> -->
+        <div class="row profileBottom justify-content-center"></div>
+        <div class="row profileBotton2 justify-content-center pe-3 ps-3">
+          <!--datos de usuario-->
+          <h4 class="profileName">Ximena Combariza</h4>
+          <!--Nombre Usuario-->
+          <span class="transportName">Me transporto en Moto</span>
+          <!--Medio de Transporte-->
+        </div>
+        <!--Fin Datos de usuario-->
+        <hr>
+        <div class="row">
+          <!--Cant Publicaciones-->
+          <h4 class="cantPostName">Publicaciones</h4>
+          <span class="cantPostNumber">35</span>
+        </div>
+        <!--Fin Cant Publicaciones-->
+        <hr>
+        <div class="row">
+          <!--Cant Seguidores-->
+          <h4 class="cantFollower">Seguidores</h4>
+          <span class="cantFollowerNumber">155</span>
+        </div>
+        <!--Fin Cant Seguidores-->
+        <hr>
+        <div class="row justify-content-center">
+          <button mat-button class="viewProfile">Ver perfil</button>
+        </div>
       </div>
+      <!--Fin Profile content-->
+
+      <div class="col-lg-7 col-md-7 col-sm-10 m-2 shadow m-1">
+        <!--Incio post content contenedor-->
+        <div class="row colorBar"></div>
+        <!--Post content color bar-->
+        <div class="row shadow ">
+          <!--Post a post container-->
+          <div class="col col-lg-2 col-md-2 col-sm-6 mb-2">
+            <img class="rounded-circle userPhotoPost shadow p-2 align-content-center"
+              src="https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
+              alt="">
+          </div>
+          <!--Div imagen de post a post-->
+          <div class="col-lg-6 col-md-6 col-sm-1 buttonsPost d-flex justify-content-end align-self-center">
+            <button mat-raised-button class="question me-1" (click)="openDialogQuestion()">Hacer Pregunta</button>
+            <!--Boton de pregunta-->
+            <button mat-raised-button class="publication ms-1" (click)="openDialog()">Publicar viaje</button>
+            <!--Boton de postear-->
+          </div>
+          <!--Botones del post-->
+        </div>
+          <div class="row row-cols-3 mt-2 shadow d-flex align-self-center justify-content-center">
+            <div class="col-lg-4 col-md-4 col-sm-10 p-3">
+              <div class="row align-content-center">
+                <div class="col-lg-4 col-md-5 col-sm-5">
+                  <img class="settingsIcon" src="../../assets/img/icons-02.png" alt="">
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-5 d-flex align-self-center justify-content-center">
+                    <h3 class="iconText">Feed</h3>
+                  </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-10 d-flex align-self-center justify-content-center">
+              <div class="row align-content-center">
+                <div class="col-lg-4 col-md-5 col-sm-5">
+                  <img class="settingsIcon" src="../../assets/img/icons-03.png" alt="">
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-5 d-flex align-self-center">
+                    <h3 class="iconText">Ajustes de Cuenta</h3>
+                  </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-10 d-flex align-self-center">
+              <div class="row align-content-center">
+                <div class="col-lg-4 col-md-5 col-sm-5">
+                  <img class="settingsIcon" src="../../assets/img/icons-04.png" alt="">
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-5 d-flex align-self-center">
+                    <h3 class="iconText"> &nbsp; &nbsp; &nbsp;  Amigos &nbsp; &nbsp; &nbsp;  </h3>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        <div class="container-fluid">
+          <!--Post-->
+          <div class="row post mt-4 shadow">
+            <mat-card class="col-lg-12 col-md-10 col-sm-5 mt-2 superiorInfoPost">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title class="namePost">Ximena Combariza</mat-card-title>
+                <mat-card-subtitle class="publicationTime">
+                  <mat-icon class="iconTime">timelapse</mat-icon>
+                  <h3 class="timePublication">Tiempo de publicacion</h3>
+                </mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image
+                src="https://www.infobae.com/new-resizer/csdGxJidj9jpiH5TtbRtgViqcjM=/1200x628/filters:format(webp):quality(85)//cloudfront-us-east-1.images.arcpublishing.com/infobae/EJ4Y4ODTOFDOVJXKP4RLBRBUUI.jpg"
+                alt="Photo">
+              <mat-card-content>
+                <div class="textExperience" [ngClass]="{'limitTextHeight': isReadMore}">
+                  <div class="row">
+                    <div class="col-12">
+                      <h2 class="tripName mt-2">Viaje a San Andres</h2>
+                    </div>
+                  </div>
+                  <div class="row row-cols-3 d-flex justify-content-center align-self-center">
+                    <!--Titulos-->
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="tittlePost">Transporte</h3>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="tittlePost">Lugar de Viaje</h3>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="tittlePost">Presupuesto</h3>
+                    </div>
+                  </div>
+                  <div class="row row-cols-3 d-flex justify-content-center align-self-center ">
+                    <!--Respuestas-->
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="answersTripinformation">AviÛn</h3>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="answersTripinformation">San Andres Islas</h3>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="answersTripinformation">$$</h3>
+                    </div>
+                  </div>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                  into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                  release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                  software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                <button mat-button class="buttonReadMore" type="button" (click)="showText()">
+                  {{ isReadMore ? 'Leer m·s': 'Leer menos' }}</button>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+        <!--FIN Estructura post-->
+
+        <div class="container-fluid">
+          <!--Post-->
+          <div class="row post mt-4 shadow">
+            <mat-card class="col-lg-12 col-md-10 col-sm-5 mt-2 superiorInfoPost">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title class="namePost">Ximena Combariza</mat-card-title>
+                <mat-card-subtitle class="publicationTime">
+                  <mat-icon class="iconTime">timelapse</mat-icon>
+                  <h3 class="timePublication">Tiempo de publicacion</h3>
+                </mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image
+                src="https://www.infobae.com/new-resizer/csdGxJidj9jpiH5TtbRtgViqcjM=/1200x628/filters:format(webp):quality(85)//cloudfront-us-east-1.images.arcpublishing.com/infobae/EJ4Y4ODTOFDOVJXKP4RLBRBUUI.jpg"
+                alt="Photo">
+              <mat-card-content>
+                <div class="textExperience" [ngClass]="{'limitTextHeight': isReadMore}">
+                  <div class="row">
+                    <div class="col-12">
+                      <h2 class="tripName mt-2">Viaje a San Andres</h2>
+                    </div>
+                  </div>
+                  <div class="row row-cols-3 d-flex justify-content-center align-self-center">
+                    <!--Titulos-->
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="tittlePost">Transporte</h3>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="tittlePost">Lugar de Viaje</h3>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="tittlePost">Presupuesto</h3>
+                    </div>
+                  </div>
+                  <div class="row row-cols-3 d-flex justify-content-center align-self-center ">
+                    <!--Respuestas-->
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="answersTripinformation">AviÛn</h3>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="answersTripinformation">San Andres Islas</h3>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="answersTripinformation">$$</h3>
+                    </div>
+                  </div>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                  into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                  release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                  software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                <button mat-button class="buttonReadMore" type="button" (click)="showText()">
+                  {{ isReadMore ? 'Leer m·s': 'Leer menos' }}</button>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+        <!--FIN Estructura post-->
+
+      </div><!-- </div> -->
+      <!-- </div> -->
     </div>
   </div>
+</div>
+>>>>>>> Stashed changes
