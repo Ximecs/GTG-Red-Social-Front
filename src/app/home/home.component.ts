@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+
   showText() { //leer más y leer menos texto experiencia
     this.isReadMore = !this.isReadMore
  }
