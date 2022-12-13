@@ -1,3 +1,130 @@
-button {
+.boton2 {
   width: 100%;
+  background-color: #E68309;
+
+
+}
+.login {
+  font-family: 'Poppins', sans-serif;
+
+  display: grid;
+
+  grid-template-columns: auto auto;
+  padding: 2px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: small;
+}
+
+
+h2 {
+  text-align: center;
+}
+
+/* // .botón {
+
+// margin-top: 120px;
+// } */
+
+.botón {
+  background-color: red;
+}
+
+.signin {
+  width: 95px;
+  font-size: 12px;
+  height: 37px;
+}
+
+.registro {
+  background-color: #E68309;
+  font-size:12px;
+  width: 80px;
+  height: 37px;
+}
+
+/* // .registro-signin {
+//   margin-left: 220px;
+//   margin-top: 5px;
+// } */
+
+/* .Email {
+  width: 240px;
+}
+
+*/
+
+.formulario {
+  width: 300px;
+  margin-left: 42px;
+}
+
+.texto {
+  margin-top: 20px;
+
+}
+
+.grid-item1 {
+  width: 400px;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.grid-item2{
+  width: 400px;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.candado {
+  margin-right: 4px;
+}
+
+.usuario {
+  margin-right: 4px;
+}
+
+.mundo {
+  margin-right: 4px;
+}
+
+@media (max-width: 930px) {
+  .logo1 {
+    display: none;
+  }
+
+  .login {
+    max-width: 400px;
+    min-width: 200px;
+    max-height: 500px;
+    margin-top: 0px;
+  }
+  .grid-item1 {
+    display: none;
+  }
+}
+
+.pagina {
+  background-color: #E68309;
+}
+
+.botón {
+  background-color: #E68309;
+  color: white;
+}
+
+.logo2 {
+  margin-left: 30px;
+}
+
+@media (min-width: 930px) {
+  .logo2 {
+    display: none;
+  }
 }

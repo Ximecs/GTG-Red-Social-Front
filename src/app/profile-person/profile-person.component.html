@@ -1,0 +1,93 @@
+<div class="completePage">
+  <div class="banner shadow col-lg-12"></div>
+  <div class="principalContainer container-fluid shadow d-flex p-3 bg-white">
+    <div class="row justify-content-start">
+      <div class="container profileContent">
+        <div class="row  justify-content-start mt-5">
+          <!--imagen de perfil-->
+          <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center divImage">
+            <img class="rounded-circle userPhoto img-fluid shadow p-2 border border-white mx-2"
+              src="https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
+              alt="">
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-12 justify-content-start">
+            <h1 class="profileName"> Ximena Combariza</h1>
+            <span class="transportName"> <img src="../../assets/img/transports.png" class="iconCar" alt=""> Me transporto en Moto</span>
+          </div>
+        </div>
+        <!--</div>-->
+      </div>
+      <!--Fin Profile content-->
+
+      <!--<div class="container">-->
+        <div class="container containerPost d-flex justify-content-center">
+          <!--Post-->
+          <!--<div class="row post mt-4 shadow">-->
+            <mat-card class="col-lg-10 col-md-10 col-sm-5 mt-2 justify-content-center superiorInfoPost">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title class="namePost">Ximena Combariza</mat-card-title>
+                <mat-card-subtitle class="publicationTime">
+                  <mat-icon class="iconTime">timelapse</mat-icon>
+                  <h3 class="timePublication">Tiempo de publicacion</h3>
+                </mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image
+                src="https://www.infobae.com/new-resizer/csdGxJidj9jpiH5TtbRtgViqcjM=/1200x628/filters:format(webp):quality(85)//cloudfront-us-east-1.images.arcpublishing.com/infobae/EJ4Y4ODTOFDOVJXKP4RLBRBUUI.jpg"
+                alt="Photo">
+              <mat-card-content>
+                <div class="textExperience" [ngClass]="{'limitTextHeight': isReadMore}">
+                  <div class="row">
+                    <div class="col-12">
+                      <h2 class="tripName mt-2">Viaje a San Andres</h2>
+                    </div>
+                  </div>
+                  <div class="row row-cols-3 d-flex justify-content-center align-self-center">
+                    <!--Titulos-->
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="tittlePost">Transporte</h3>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="tittlePost">Lugar de Viaje</h3>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="tittlePost">Presupuesto</h3>
+                    </div>
+                  </div>
+                  <div class="row row-cols-3 d-flex justify-content-center align-self-center ">
+                    <!--Respuestas-->
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="answersTripinformation">AviÛn</h3>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="answersTripinformation">San Andres Islas</h3>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-2">
+                      <h3 class="answersTripinformation">$$</h3>
+                    </div>
+                  </div>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                  into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                  release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                  software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                <button mat-button class="buttonReadMore" type="button" (click)="showText()">
+                  {{ isReadMore ? 'Leer m·s': 'Leer menos' }}</button>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions>
+            </mat-card>
+          <!--</div>-->
+        <!--</div>-->
+        <!--FIN Estructura post-->
+
+
+      </div><!-- </div> -->
+      <!-- </div> -->
+    </div>
+  </div>
+</div>

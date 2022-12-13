@@ -22,6 +22,18 @@
 
         <li class="nav-item">
           <div class="col-lg-5 col-md-5 input-group search">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Assignee</mat-label>
+              <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+              <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{option.name}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+                   
+            
+            
             <input type="search" class="form-control  " placeholder="Buscar" aria-label="Search"
               aria-describedby="search-addon" />
             <button mat-button class="buttonSrc border border-1 shadow-sm">
