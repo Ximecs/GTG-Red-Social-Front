@@ -7,6 +7,7 @@ import { SignupComponent } from './signup/signup.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {SocialLoginModule, SocialAuthServiceConfig}
 
 from '@abacritt/angularx-social-login';
@@ -23,6 +24,7 @@ import { GoogleButtonComponent } from './components/google-button/google-button.
     FormsModule,
     ReactiveFormsModule,
     SocialLoginModule,
+    MatButtonToggleModule
   ],
   providers: [
     {
