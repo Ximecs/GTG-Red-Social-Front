@@ -28,4 +28,7 @@ export class ProfileService {
       headers: this.headers,
     });
   }
+  searchProfile(){
+    return this.http.get(`${environment.apiUrl}/api/profile/searchProfile`)
+  }
 }

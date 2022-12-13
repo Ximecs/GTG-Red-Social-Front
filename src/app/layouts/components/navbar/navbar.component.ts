@@ -61,4 +61,8 @@ export class NavbarComponent implements OnInit {
       },
     });
   }
+
+  searchProfile(){
+    this.profileService.searchProfile().subscribe({})
+  }
 }
