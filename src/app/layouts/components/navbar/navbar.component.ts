@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProfileService } from 'src/app/_services/profile.service';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +12,12 @@ import { TokenStorageService } from 'src/app/_services/token-storage.service';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  title = 'material-test';
+  names: string[] = ['Ximena', 'sebastian', 'Andres', 'andrea', 'xiomara', 'salvador']; //lamado de la api
+
+  control = new FormControl();
+  filNames: Observable<string[]> | undefined;
+
   user: any;
   profile: any;
   defaultAvatar: string = '/assets/img/default-avatar.png';
@@ -22,6 +31,11 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.tokenService.getUser();
     this.getProfile();
+
+    this.filNames = this.control.valueChanges.pipe(
+      startWith(''),
+      map(val => this.filter(val))
+    );
   }
 
   logout(): void {
@@ -60,5 +74,11 @@ export class NavbarComponent implements OnInit {
         console.log(error);
       },
     });
+  }
+
+  public filter(val: string): string[] {
+    const formatVal = val.toLocaleLowerCase();
+
+    return this.names.filter(userName => userName.toLocaleLowerCase().indexOf(formatVal) == 0);
   }
 }
