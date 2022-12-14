@@ -17,6 +17,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { PublicationsComponent } from './components/publications/publications.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { MatInputModule } from '@angular/material/input';
     FooterComponent,
     PageNotFoundComponent,
     PublicationsComponent,
+  
   ],
   imports: [
     BrowserModule,
