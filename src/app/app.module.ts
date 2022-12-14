@@ -27,6 +27,7 @@ import { MatInputModule } from '@angular/material/input';
     NavbarComponent,
     FooterComponent,
     PageNotFoundComponent,
+    PublicationsComponent,
   ],
   imports: [
     BrowserModule,
