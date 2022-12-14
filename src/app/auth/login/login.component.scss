@@ -2,3 +2,94 @@ button {
   width: 100%;
 }
 
+.login {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+h2 {
+  text-align: center;
+}
+
+.formulario {
+  width: 300px;
+  margin-left: 30px;
+  background-color: #fe7b00;
+}
+
+
+.boton2 {
+  background-color: #fe7b00;
+}
+
+.iniciosesion {
+  background-color: #fe7b00;
+  width: 90px;
+  font-size: 12px;
+  height: 37px;
+}
+
+
+.registro {
+  font-size: 12px;
+  width: 80px;
+  height: 37px;
+}
+
+
+.texto {
+  margin-top: 20px;
+}
+
+
+
+.grid-item1 {
+  width: 400px;
+  margin-right: 40px;
+}
+
+.grid-item2 {
+  width: 400px;
+  margin-right: 20px;
+}
+
+@media (max-width: 901px) {
+  .logo1 {
+    display: none;
+  }
+
+  .login {
+    max-width: 400px;
+    min-width: 170px;
+  }
+
+  .grid-item2 {
+    margin-left: 20px;
+  }
+
+}
+
+.pagina {
+  background-color: #E68309;
+}
+
+.logo2 {
+  margin-left: 10px;
+}
+
+
+@media (min-width: 901px) {
+  .logo2 {
+    display: none;
+  }
+}
+
+// @media (max-width: 304px) {
+//   .logo2 {
+//     display: none;
+//   }
+// }
