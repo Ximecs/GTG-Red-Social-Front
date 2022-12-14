@@ -1,1 +1,46 @@
-<div class="container shadow"></div>
+<script src="../../assets/Js/showPassword.js"></script>
+<div class="container-fluid vh-100 d-flex">
+    <div class="container shadow-lg p-5 align-self-center d-flex justify-content-center">
+        <mat-accordion>
+            <mat-expansion-panel hideToggle="false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title class="text">
+                        Cambiar Contraseña
+                        <mat-icon>lock</mat-icon>
+                    </mat-panel-title>
+                    <mat-panel-description class="text">
+                        Aqui puedes cambiar la contraseña
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div>
+                    <mat-form-field class="justify-content-center">
+                        <mat-label>Contraseña Actual</mat-label>
+                        <input ID="txtPassword" type="password" matInput placeholder="" value="" formControlName="password">
+                      </mat-form-field>
+                      <button id="show_password" class="btn buttonEye" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+                      <div>
+                        <mat-form-field class="justify-content-center">
+                            <mat-label>Contraseña Nueva</mat-label>
+                            <input ID="txtPassword" type="password" matInput placeholder="" value="" formControlName="password">
+                          </mat-form-field>
+                          <button id="show_password" class="btn buttonEye" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+                          
+                      
+                        <mat-form-field class="justify-content-center">
+                            <mat-label>Repetir Contraseña</mat-label>
+                            <input ID="txtPassword" type="password" matInput placeholder="" value="" formControlName="password">
+                          </mat-form-field>
+                          <button id="show_password" class="btn buttonEye" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+                        </div>
+                        <div class="row justify-content-end">
+              <button mat-raised-button class="boton2">Actualizar</button>
+
+                        </div>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>
+
+
+
