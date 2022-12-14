@@ -45,6 +45,9 @@ import { PublicationsComponent } from './components/publications/publications.co
     MatInputModule
 
   ],
+  // exports:[
+  //   PublicationsComponent,
+  // ],
   providers: [],
   bootstrap: [AppComponent],
 })

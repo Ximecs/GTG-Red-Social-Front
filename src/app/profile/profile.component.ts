@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { DialogBoxComponent } from '../home/dialog-box/dialog-box.component';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { QuestionBoxComponent } from '../home/question-box/question-box.component';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
 import { ProfileService } from 'src/app/_services/profile.service';
 import { FormControl } from '@angular/forms';
+import { PublicationsService } from 'src/app/_services/publications.service';
+
 
 
 
@@ -26,7 +28,13 @@ export class ProfileComponent implements OnInit {
   constructor(public dialog: MatDialog,
     private tokenService: TokenStorageService,
     private router: Router,
-    private profileService: ProfileService) {}
+    private profileService: ProfileService,
+    private publicationService:PublicationsService,
+    private activateRoute:ActivatedRoute
+    ) {}
+    
+    profilePosts:any;
+
   openDialog(){
     this.dialog.open(DialogBoxComponent,{
       width:'100%',
@@ -45,6 +53,13 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.tokenService.getUser();
     this.getProfile();
+    this.activateRoute.paramMap.subscribe(params =>{
+
+    this.getPostByUser({id: params.get("id")});
+
+    })
+   
+
   }
 
   changePhoto(e: any) {
@@ -82,6 +97,18 @@ export class ProfileComponent implements OnInit {
       },
     });
   }
+  getPostByUser(user:any){
+    this.publicationService.getPostByUser(user).subscribe({
+      next: (response) =>{
+      this.profilePosts = response
+      // window.location.reload();
+
+    },
+    error: (error) => {
+      console.log(error);
+    },
+  });
+}
 
   
   showText() { //leer más y leer menos texto experiencia

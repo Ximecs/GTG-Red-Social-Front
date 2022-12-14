@@ -15,7 +15,7 @@
             <!--imagen de perfil-->
             <img class="rounded-circle userPhoto img-fluid shadow p-2 border border-white"
             [src]="profile?.photoProfile || defaultAvatar" alt="" width="90%" height="90%">
-              
+
           </div>
         </div>
         <div class="row profileBottom justify-content-center"></div>
@@ -24,6 +24,8 @@
           <h4 class="profileName">{{user.fullName}}</h4>
           <!--Nombre Usuario-->
           <span class="transportName">Me transporto en Moto</span>
+
+
           <!--Medio de Transporte-->
         </div>
         <!--Fin Datos de usuario-->
@@ -153,6 +155,9 @@
                   release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
                   software like Aldus PageMaker including versions of Lorem Ipsum.
                 </div>
+
+
+
                 <button mat-button class="buttonReadMore" type="button" (click)="showText()">
                   {{ isReadMore ? 'Leer m·s': 'Leer menos' }}</button>
               </mat-card-content>
@@ -235,6 +240,7 @@
     </div>
   </div>
 </div>
+
 
 
  

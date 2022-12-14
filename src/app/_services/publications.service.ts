@@ -14,14 +14,20 @@ export class PublicationsService {
 
   uploadPost(post: any) {
     return this.http.post(
-      `${environment.apiUrl}/api/newPost/uploadPost`, post,
+      `${environment.apiUrl}/api/publications/newPost`, post,
       { headers: this.headers }
     );
-  }
+  };
   getPost() {
     return this.http.get(
-      `${environment.apiUrl}/api/newPost/getPost`,
+      `${environment.apiUrl}/api/publications/getPublications`,
       { headers: this.headers }
+    )
+  };
+  getPostByUser(user: any) {
+    return this.http.post(
+      `${environment.apiUrl}/api/publications/getPublicationByUser`, user
+
     )
   };
 };

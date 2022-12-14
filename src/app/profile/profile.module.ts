@@ -14,6 +14,7 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatListModule} from '@angular/material/list';
 
 
+
 @NgModule({
   declarations: [
     ProfileComponent
@@ -29,7 +30,8 @@ import {MatListModule} from '@angular/material/list';
     ProfileRoutingModule,
     MatDialogModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+
   ]
 })
 export class ProfileModule { }

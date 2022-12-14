@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
 import { ProfileService } from 'src/app/_services/profile.service';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
 import { FormControl } from '@angular/forms';
+import { PublicationsService } from 'src/app/_services/publications.service';
+
 
 @Component({
   selector: 'app-home',
@@ -23,7 +25,9 @@ export class HomeComponent implements OnInit {
   constructor(public dialog: MatDialog,
     private tokenService: TokenStorageService,
     private router: Router,
-    private profileService: ProfileService) {}
+    private profileService: ProfileService,
+    private publicationService:PublicationsService
+    ) {}
   openDialog(){
     this.dialog.open(DialogBoxComponent,{
       width:'100%',
@@ -44,6 +48,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.tokenService.getUser();
     this.getProfile();
+    this.getPost
   }
   changePhoto(e: any) {
     console.log('change photo called');
@@ -79,6 +84,18 @@ export class HomeComponent implements OnInit {
       },
     });
   }
+  getPost(){
+    this.publicationService.getPost().subscribe({
+      next: (response) =>{
+      console.log(response)
+      window.location.reload();
+
+    },
+    error: (error) => {
+      console.log(error);
+    },
+  });
+}
   
 
   showText() { //leer más y leer menos texto experiencia
