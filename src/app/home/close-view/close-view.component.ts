@@ -22,7 +22,7 @@ export class CloseViewComponent implements OnInit {
 
   onNoClick(): void {
     this.dialogRef.close();
-    this.dialog.close();
+    this.dialog.close(true);
     console.log(this.data);
   }
   continueEditing():void{

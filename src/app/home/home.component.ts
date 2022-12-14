@@ -3,6 +3,8 @@ import { MatDialog } from '@angular/material/dialog';
 
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { QuestionBoxComponent } from './question-box/question-box.component';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -11,7 +13,8 @@ import { QuestionBoxComponent } from './question-box/question-box.component';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog,
+    private router: Router) {}
   openDialog(){
     this.dialog.open(DialogBoxComponent,{
       width:'100%',
@@ -26,7 +29,9 @@ export class HomeComponent implements OnInit {
       data: "right click"
     })
   }
-  
+  viewProfile(){
+    this.router.navigate(['/profile'])
+  }
   
 
   ngOnInit(): void {
