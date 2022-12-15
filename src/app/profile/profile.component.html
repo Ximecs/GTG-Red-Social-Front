@@ -102,16 +102,16 @@
 
 
 
-        <div class="container-fluid">
+        <div class="container-fluid" *ngFor="let post of profilePosts">
           <!--Post-->
           <div class="row post mt-4 shadow">
             <mat-card class="col-lg-12 col-md-10 col-sm-5 mt-2 superiorInfoPost">
               <mat-card-header>
                 <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title class="namePost">{{user.fullName}}</mat-card-title>
+                <mat-card-title class="namePost">{{post.profileName}}</mat-card-title>
                 <mat-card-subtitle class="publicationTime">
                   <mat-icon class="iconTime">timelapse</mat-icon>
-                  <h3 class="timePublication">Tiempo de publicacion</h3>
+                  <h3 class="timePublication">{{post.publiDate}}</h3>
                 </mat-card-subtitle>
               </mat-card-header>
               <img mat-card-image
@@ -121,7 +121,7 @@
                 <div class="textExperience" [ngClass]="{'limitTextHeight': isReadMore}">
                   <div class="row">
                     <div class="col-12">
-                      <h2 class="tripName mt-2">Viaje a San Andres</h2>
+                      <h2 class="tripName mt-2"></h2>
                     </div>
                   </div>
                   <div class="row row-cols-3 d-flex justify-content-center align-self-center">
@@ -139,13 +139,13 @@
                   <div class="row row-cols-3 d-flex justify-content-center align-self-center ">
                     <!--Respuestas-->
                     <div class="col-lg-4 col-md-4 col-sm-2">
-                      <h3 class="answersTripinformation">AviÛn</h3>
+                      <h3 class="answersTripinformation">{{post.transport}}</h3>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-2">
-                      <h3 class="answersTripinformation">San Andres Islas</h3>
+                      <h3 class="answersTripinformation">{{post.ciudad}}</h3>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-2">
-                      <h3 class="answersTripinformation">$$</h3>
+                      <h3 class="answersTripinformation">{{post.presupuesto}}</h3>
                     </div>
                   </div>
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -168,10 +168,11 @@
             </mat-card>
           </div>
         </div>
+
         <!--FIN Estructura post-->
 
-        <div class="container-fluid">
-          <!--Post-->
+        <!-- <div class="container-fluid">
+          Post
           <div class="row post mt-4 shadow">
             <mat-card class="col-lg-12 col-md-10 col-sm-5 mt-2 superiorInfoPost">
               <mat-card-header>
@@ -193,7 +194,7 @@
                     </div>
                   </div>
                   <div class="row row-cols-3 d-flex justify-content-center align-self-center">
-                    <!--Titulos-->
+                    Titulos
                     <div class="col-lg-4 col-md-4 col-sm-2">
                       <h3 class="tittlePost">Transporte</h3>
                     </div>
@@ -205,7 +206,7 @@
                     </div>
                   </div>
                   <div class="row row-cols-3 d-flex justify-content-center align-self-center ">
-                    <!--Respuestas-->
+                    Respuestas
                     <div class="col-lg-4 col-md-4 col-sm-2">
                       <h3 class="answersTripinformation">AviÛn</h3>
                     </div>
@@ -233,7 +234,7 @@
             </mat-card>
           </div>
         </div>
-        <!--FIN Estructura post-->
+        FIN Estructura post -->
 
       </div><!-- </div> -->
       <!-- </div> -->

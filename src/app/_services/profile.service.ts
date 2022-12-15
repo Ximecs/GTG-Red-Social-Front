@@ -22,6 +22,13 @@ export class ProfileService {
       { headers: this.headers }
     );
   }
+  uploadPhotoBanner(photoBanner: any) {
+    return this.http.post(
+      `${environment.apiUrl}/api/profile/updatePhotoBanner`,
+      photoBanner,
+      { headers: this.headers }
+    );
+  }
 
   getProfile() {
     return this.http.get(`${environment.apiUrl}/api/profile/getProfile`, {

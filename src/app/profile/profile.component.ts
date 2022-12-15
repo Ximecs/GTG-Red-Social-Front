@@ -84,6 +84,28 @@ export class ProfileComponent implements OnInit {
       },
     });
   }
+  changePhotoBanner(e: any) {
+    console.log('change photo called');
+    const file = e.target.files[0];
+  
+    if (!file) {
+      return;
+    }
+
+    console.log(file);
+    const formData = new FormData();
+    formData.append('photo', file);
+    this.profileService.uploadPhotoBanner(formData).subscribe({
+      next: (data) => {
+        console.log(data);
+        this.ngOnInit();
+
+      },
+      error: (error) => {
+        console.log(error);
+      },
+    });
+  }
   
 
   
@@ -91,6 +113,7 @@ export class ProfileComponent implements OnInit {
     this.profileService.getProfile().subscribe({
       next: (response: any) => {
         this.profile = response.data;
+
       },
       error: (error) => {
         console.log(error);
@@ -99,8 +122,10 @@ export class ProfileComponent implements OnInit {
   }
   getPostByUser(user:any){
     this.publicationService.getPostByUser(user).subscribe({
-      next: (response) =>{
-      this.profilePosts = response
+      next: (response:any) =>{
+      this.profilePosts = response.data
+      console.log(this.profilePosts)
+
       // window.location.reload();
 
     },
