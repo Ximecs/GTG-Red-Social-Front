@@ -18,7 +18,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { LoadScriptsService } from './_services/load-scripts.service';
 
 @NgModule({
   declarations: [
@@ -41,9 +41,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
-  providers: [],
+  providers: [
+    LoadScriptsService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

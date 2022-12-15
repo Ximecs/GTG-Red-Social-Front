@@ -9,6 +9,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 
+//inicio Servicio
+//import { LoadScriptsService } from '../_services/load-scripts.service';
+//Fin servicio
+
 @NgModule({
   declarations: [
     SettingsPageComponent
@@ -21,6 +25,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatInputModule,
     MatButtonModule
-  ]
+  ],
+
 })
 export class SettingsPageModule { }
