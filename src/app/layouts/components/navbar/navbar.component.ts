@@ -64,6 +64,7 @@ export class NavbarComponent implements OnInit {
     this.profileService.uploadPhotoProfile(formData).subscribe({
       next: (data) => {
         console.log(data);
+
         window.location.reload();
 
       },

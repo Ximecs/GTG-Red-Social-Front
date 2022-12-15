@@ -71,7 +71,10 @@
     </div><!--FIN Experiencia-->
     <div class="row mb-3">
         <div class="col-lg-6 col-md-3 col-sm-5 mt-3 uploadPhotos">
-            <button mat-raised-button class="chooseFileButton shadow" (click)="openBottomSheet()">Cargar Fotos</button>
+            <button mat-raised-button class="chooseFileButton shadow"  (click)="fileInput.click()">Cargar Fotos
+                <input hidden #fileInput type="file" id="myFile" name="filename" (change)="changePhoto($event)"
+                accept="image/*">
+            </button>
         </div>
         <div class="col-lg-6 col-md-3 col-sm-5 mt-3 justify-content-end d-flex cancelPost">
             <button mat-raised-button class="cancelButton me-3 shadow" (click)="openCancellLog()">Cancelar</button>
