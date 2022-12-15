@@ -23,9 +23,15 @@ export class ProfileService {
     );
   }
 
+
   getProfile() {
-    return this.http.get(`${environment.apiUrl}/api/profile/getProfile`, {
-      headers: this.headers,
-    });
+    return this.http.get(`${environment.apiUrl}/api/profile/getProfile`, 
+    {headers: this.headers,}
+    );
+  }
+    getProfileByUser(profileUser:any) {
+    return this.http.post(`${environment.apiUrl}/api/profile/getProfileByUser`, profileUser
+
+    );
   }
 }

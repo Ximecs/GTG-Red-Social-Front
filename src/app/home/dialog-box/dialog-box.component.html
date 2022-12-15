@@ -2,22 +2,18 @@
     <div class="row d-flex orangeRowPost align-items-center">
         <span class="postTittleText">Publicar un viaje</span>
     </div>
-
+<form [formGroup]="post">
     <mat-form-field class="mt-1 tripTittle">
-        <input matInput placeholder="Agrega un titulo a tu viaje" value="">
+        <input matInput formControlName="publicationTitle" placeholder ="Agrega un titulo a tu viaje" value="">
     </mat-form-field>
 
     <div class="row justify-content-center tripTittle ">
         <!--Medio de trasporte-->
         <div class="col-lg-6 col-md-6 col-sm-10 mb-2 vehicle">
             <mat-form-field class="col-lg-6 col-md-6 col-sm-10 selecLabels">
-                <mat-label class="">Selecciona medio de transporte</mat-label>
-                <mat-select>
-                    <mat-option class="options" value="option1">Moto</mat-option>
-                    <mat-option class="options" value="option3">Carro</mat-option>
-                    <mat-option class="options" value="option3">Avión</mat-option>
-                    <mat-option class="options" value="option3">Bus</mat-option>
-                </mat-select>
+                <mat-label class="">Escribe un medio de transporte</mat-label>
+        <input matInput formControlName="transport"  placeholder  ="Agrega un medio de transporte"value="">
+              
             </mat-form-field>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-10 mb-3 vehicleInput">
@@ -33,23 +29,15 @@
         <div class="col-lg-6 col-md-6 col-sm-10 mt-2 vehicle">
             <mat-form-field class="col-lg-6 col-md-6 col-sm-10 selecLabels mt-1">
                 <mat-label class="">Selecciona departamento de destino</mat-label>
-                <mat-select>
-                    <mat-option class="options" value="option1">Moto</mat-option>
-                    <mat-option class="options" value="option3">Carro</mat-option>
-                    <mat-option class="options" value="option3">Avión</mat-option>
-                    <mat-option class="options" value="option3">Bus</mat-option>
-                </mat-select>
+        <input matInput placeholder ="Departamento" value="">
+             
             </mat-form-field>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-10  mt-2 vehicleInput">
             <mat-form-field class="col-lg-6 col-md-6 col-sm-10 selecLabels mt-1">
                 <mat-label class="">Selecciona ciudad de destino</mat-label>
-                <mat-select>
-                    <mat-option class="options" value="option1">Moto</mat-option>
-                    <mat-option class="options" value="option3">Carro</mat-option>
-                    <mat-option class="options" value="option3">Avión</mat-option>
-                    <mat-option class="options" value="option3">Bus</mat-option>
-                </mat-select>
+        <input matInput formControlName="ciudad" placeholder ="Ciudad" value="">
+              
             </mat-form-field>
         </div>
     </div>
@@ -60,21 +48,15 @@
         <div class="col-lg-6 col-md-6 col-sm-10 mt-1 vehicle">
             <mat-form-field class="col-lg-6 col-md-6 col-sm-10 selecLabels mt-4">
                 <mat-label class="">Presupuesto Aprox.</mat-label>
-                <mat-select>
-                    <mat-option class="options" value="option1">$</mat-option>
-                    <mat-option class="options" value="option3">$$</mat-option>
-                    <mat-option class="options" value="option3">$$$</mat-option>
-                </mat-select>
+        <input matInput formControlName="presupuesto"  placeholder ="Agrega un valor aproximado" value="">
+              
             </mat-form-field>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-10  mt-2 vehicleInput">
             <mat-form-field class="col-lg-6 col-md-6 col-sm-10 selecLabels mt-3 sm-mb-2">
                 <mat-label class="">Temporada de viaje</mat-label>
-                <mat-select>
-                    <mat-option class="options" value="option1">Alta</mat-option>
-                    <mat-option class="options" value="option3">Media</mat-option>
-                    <mat-option class="options" value="option3">Baja</mat-option>
-                </mat-select>
+        <input matInput placeholder ="Agrega si fue temporada Alta o Baja" value="">
+             
             </mat-form-field>
         </div>
     </div><!-- FINprice y temp. Viaje-->
@@ -83,7 +65,7 @@
         <div class="col-lg-6 col-md-6 col-sm-10 tripTittle mt-4" >
             <mat-form-field class="tripTittle mt-5">
                 <mat-label>Cuentanos más detalles de tu experiencia</mat-label>
-                <textarea class="caja-texto" matInput placeholder="Hice una ruta de..."></textarea>
+                <textarea class="caja-texto" matInput formControlName="publiText" placeholder="Hice una ruta de..." value=""></textarea>
               </mat-form-field>
         </div>
     </div><!--FIN Experiencia-->
@@ -93,8 +75,8 @@
         </div>
         <div class="col-lg-6 col-md-3 col-sm-5 mt-3 justify-content-end d-flex cancelPost">
             <button mat-raised-button class="cancelButton me-3 shadow" (click)="openCancellLog()">Cancelar</button>
-            <button mat-raised-button class="PostButton shadow" (click)="openBottomSheet()">Publicar</button>
+            <button mat-raised-button class="PostButton shadow guardar" value="save" (click)="openBottomSheet()">Publicar</button>
         </div>
     </div>
-
+</form>
 </div>

@@ -33,6 +33,18 @@ export class NavbarComponent implements OnInit {
     this.getProfile();
   }
 
+  getProfile() {
+    this.profileService.getProfile().subscribe({
+      next: (response: any) => {
+        this.profile = response.data;
+        console.log(this.profile)
+      },
+      error: (error) => {
+        console.log(error);
+      },
+    });
+  }
+
   logout(): void {
     this.tokenService.logout();
     this.router.navigate(['/login']);
@@ -52,7 +64,8 @@ export class NavbarComponent implements OnInit {
     this.profileService.uploadPhotoProfile(formData).subscribe({
       next: (data) => {
         console.log(data);
-        this.ngOnInit();
+        window.location.reload();
+
       },
       error: (error) => {
         console.log(error);
@@ -60,14 +73,4 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  getProfile() {
-    this.profileService.getProfile().subscribe({
-      next: (response: any) => {
-        this.profile = response.data;
-      },
-      error: (error) => {
-        console.log(error);
-      },
-    });
-  }
 }

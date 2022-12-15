@@ -16,9 +16,13 @@ import { ChooseFilComponent } from './choose-fil/choose-fil.component';
 import {MatListModule} from '@angular/material/list';
 import { QuestionBoxComponent } from './question-box/question-box.component';
 import { CloseViewComponent } from './close-view/close-view.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [HomeComponent, DialogBoxComponent, ChooseFilComponent, QuestionBoxComponent, CloseViewComponent],
-  imports: [CommonModule, MatBottomSheetModule, MatSelectModule, HomeRoutingModule, MatInputModule,MatCardModule,MatIconModule,MatButtonModule,MatDialogModule,MatFormFieldModule, MatListModule],
+  imports: [CommonModule, MatBottomSheetModule, MatSelectModule, HomeRoutingModule, MatInputModule,MatCardModule,
+    MatIconModule,MatButtonModule,MatDialogModule,MatFormFieldModule, MatListModule,FormsModule,ReactiveFormsModule]
 })
 export class HomeModule {}

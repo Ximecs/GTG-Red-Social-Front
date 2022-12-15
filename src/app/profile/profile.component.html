@@ -14,16 +14,18 @@
           <div class="row justify-content-center mt-5">
             <!--imagen de perfil-->
             <img class="rounded-circle userPhoto img-fluid shadow p-2 border border-white"
-              src="https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
-              alt="">
+            [src]="profile?.photoProfile || defaultAvatar" alt="" width="90%" height="90%">
+
           </div>
         </div>
         <div class="row profileBottom justify-content-center"></div>
         <div class="row profileBotton2 justify-content-center pe-3 ps-3">
           <!--datos de usuario-->
-          <h4 class="profileName">Ximena Combariza</h4>
+          <h4 class="profileName">{{user.fullName}}</h4>
           <!--Nombre Usuario-->
-          <span class="transportName">Me transporto en Moto</span>
+          <span class="transportName"></span>
+
+
           <!--Medio de Transporte-->
         </div>
         <!--Fin Datos de usuario-->
@@ -31,11 +33,11 @@
         <div class="row">
           <!--Cant Publicaciones-->
           <h4 class="cantPostName">Publicaciones</h4>
-          <span class="cantPostNumber">35</span>
+          <span class="cantPostNumber">{{numberPosts}}</span>
         </div>
         <!--Fin Cant Publicaciones-->
         <!--Fin Cant Seguidores-->
-        <hr>
+        
         <div class="row justify-content-center">
           <button mat-button class="viewProfile">Cambiar foto de perfil</button>
         </div>
@@ -50,8 +52,8 @@
           <!--Post a post container-->
           <div class="col col-lg-2 col-md-2 col-sm-6 mb-2">
             <img class="rounded-circle userPhotoPost shadow p-2 align-content-center"
-              src="https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
-              alt="">
+              [src]="profile?.photoProfile || defaultAvatar" alt="" width="100%" height="100%">
+              
           </div>
           <!--Div imagen de post a post-->
           <div class="col-lg-6 col-md-6 col-sm-1 buttonsPost d-flex justify-content-end align-self-center">
@@ -98,26 +100,26 @@
 
 
 
-        <div class="container-fluid">
+        <div class="container-fluid" *ngFor="let post of profilePosts">
           <!--Post-->
           <div class="row post mt-4 shadow">
             <mat-card class="col-lg-12 col-md-10 col-sm-5 mt-2 superiorInfoPost">
               <mat-card-header>
                 <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title class="namePost">Ximena Combariza</mat-card-title>
+                <mat-card-title class="namePost">{{post.profileName}}</mat-card-title>
                 <mat-card-subtitle class="publicationTime">
-                  <mat-icon class="iconTime">timelapse</mat-icon>
-                  <h3 class="timePublication">Tiempo de publicacion</h3>
+                  <h3 class="iconTime">{{post.publicationTitle}}</h3>
+                  <h3 class="timePublication">{{post.publiDate}}</h3>
                 </mat-card-subtitle>
               </mat-card-header>
               <img mat-card-image
-                src="https://www.infobae.com/new-resizer/csdGxJidj9jpiH5TtbRtgViqcjM=/1200x628/filters:format(webp):quality(85)//cloudfront-us-east-1.images.arcpublishing.com/infobae/EJ4Y4ODTOFDOVJXKP4RLBRBUUI.jpg"
+                [src]="post?.publiPicture || defaaultPhotoProfile"
                 alt="Photo">
               <mat-card-content>
                 <div class="textExperience" [ngClass]="{'limitTextHeight': isReadMore}">
                   <div class="row">
                     <div class="col-12">
-                      <h2 class="tripName mt-2">Viaje a San Andres</h2>
+                      <h2 class="tripName mt-2"></h2>
                     </div>
                   </div>
                   <div class="row row-cols-3 d-flex justify-content-center align-self-center">
@@ -135,87 +137,20 @@
                   <div class="row row-cols-3 d-flex justify-content-center align-self-center ">
                     <!--Respuestas-->
                     <div class="col-lg-4 col-md-4 col-sm-2">
-                      <h3 class="answersTripinformation">AviÛn</h3>
+                      <h3 class="answersTripinformation">{{post.transport}}</h3>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-2">
-                      <h3 class="answersTripinformation">San Andres Islas</h3>
+                      <h3 class="answersTripinformation">{{post.ciudad}}</h3>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-2">
-                      <h3 class="answersTripinformation">$$</h3>
+                      <h3 class="answersTripinformation">{{post.presupuesto}}</h3>
                     </div>
                   </div>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                  into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                  release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                  software like Aldus PageMaker including versions of Lorem Ipsum.
+                 {{post.publiText}}
                 </div>
-                <button mat-button class="buttonReadMore" type="button" (click)="showText()">
-                  {{ isReadMore ? 'Leer m·s': 'Leer menos' }}</button>
-              </mat-card-content>
-              <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
-              </mat-card-actions>
-            </mat-card>
-          </div>
-        </div>
-        <!--FIN Estructura post-->
 
-        <div class="container-fluid">
-          <!--Post-->
-          <div class="row post mt-4 shadow">
-            <mat-card class="col-lg-12 col-md-10 col-sm-5 mt-2 superiorInfoPost">
-              <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title class="namePost">Ximena Combariza</mat-card-title>
-                <mat-card-subtitle class="publicationTime">
-                  <mat-icon class="iconTime">timelapse</mat-icon>
-                  <h3 class="timePublication">Tiempo de publicacion</h3>
-                </mat-card-subtitle>
-              </mat-card-header>
-              <img mat-card-image
-                src="https://www.infobae.com/new-resizer/csdGxJidj9jpiH5TtbRtgViqcjM=/1200x628/filters:format(webp):quality(85)//cloudfront-us-east-1.images.arcpublishing.com/infobae/EJ4Y4ODTOFDOVJXKP4RLBRBUUI.jpg"
-                alt="Photo">
-              <mat-card-content>
-                <div class="textExperience" [ngClass]="{'limitTextHeight': isReadMore}">
-                  <div class="row">
-                    <div class="col-12">
-                      <h2 class="tripName mt-2">Viaje a San Andres</h2>
-                    </div>
-                  </div>
-                  <div class="row row-cols-3 d-flex justify-content-center align-self-center">
-                    <!--Titulos-->
-                    <div class="col-lg-4 col-md-4 col-sm-2">
-                      <h3 class="tittlePost">Transporte</h3>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-2">
-                      <h3 class="tittlePost">Lugar de Viaje</h3>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-2">
-                      <h3 class="tittlePost">Presupuesto</h3>
-                    </div>
-                  </div>
-                  <div class="row row-cols-3 d-flex justify-content-center align-self-center ">
-                    <!--Respuestas-->
-                    <div class="col-lg-4 col-md-4 col-sm-2">
-                      <h3 class="answersTripinformation">AviÛn</h3>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-2">
-                      <h3 class="answersTripinformation">San Andres Islas</h3>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-2">
-                      <h3 class="answersTripinformation">$$</h3>
-                    </div>
-                  </div>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                  into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                  release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                  software like Aldus PageMaker including versions of Lorem Ipsum.
-                </div>
+
+
                 <button mat-button class="buttonReadMore" type="button" (click)="showText()">
                   {{ isReadMore ? 'Leer m·s': 'Leer menos' }}</button>
               </mat-card-content>
@@ -226,7 +161,8 @@
             </mat-card>
           </div>
         </div>
-        <!--FIN Estructura post-->
+
+       
 
       </div><!-- </div> -->
       <!-- </div> -->
@@ -234,3 +170,6 @@
   </div>
 </div>
 
+
+
+ 

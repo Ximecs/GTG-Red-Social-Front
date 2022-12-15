@@ -19,6 +19,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoadScriptsService } from './_services/load-scripts.service';
+import { PublicationsComponent } from './components/publications/publications.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,8 @@ import { LoadScriptsService } from './_services/load-scripts.service';
     NavbarComponent,
     FooterComponent,
     PageNotFoundComponent,
+    PublicationsComponent,
+  
   ],
   imports: [
     BrowserModule,

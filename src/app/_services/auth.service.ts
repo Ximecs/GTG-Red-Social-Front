@@ -19,7 +19,7 @@ export class AuthService {
   
    googleLogin(googleAccount: any) {
     return this.http.post(
-       `${environment.apiUrl}/api/auth/login`,
+       `${environment.apiUrl}/api/auth/googleLogin`,
        googleAccount
     );
    }

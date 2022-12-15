@@ -30,7 +30,9 @@ export class LoginComponent implements OnInit {
       this.authService.login(this.form.value).subscribe({
         next: (data: any) => {
           this.tokenService.saveToken(data.token);
-          this.router.navigate(['/']);
+          this.router.navigate(['/']).then(()=>{
+            window.location.reload();
+          })
         },
         error: (err) => {
           console.log(err);
