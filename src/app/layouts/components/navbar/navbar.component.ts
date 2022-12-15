@@ -22,20 +22,6 @@ export class NavbarComponent implements OnInit {
   profile: any;
   defaultAvatar: string = '/assets/img/default-avatar.png';
 
-<<<<<<< HEAD
-//title
-  tittle = 'material-test';
-  name: string[] = ['Ximena', 'sebastian', 'Andres', 'andrea', 'xiomara', 'salvador']; //llamado de la api
-
-  //control
-  controll = new FormControl();
-
-  //filNames
-  fillNames: Observable<string[]> | undefined;
-
-
-=======
->>>>>>> 704db5a59940a39a0c962ebad77d401d82e6e354
   constructor(
     private tokenService: TokenStorageService,
     private router: Router,
