@@ -13,7 +13,7 @@ import {map, startWith} from 'rxjs/operators';
 })
 export class NavbarComponent implements OnInit {
   title = 'material-test';
-  names: string[] = ['Ximena', 'sebastian', 'Andres', 'andrea', 'xiomara', 'salvador']; //lamado de la api
+  names: string[] = ['Ximena', 'sebastian', 'Andres', 'andrea', 'xiomara', 'salvador']; //llamado de la api
 
   control = new FormControl();
   filNames: Observable<string[]> | undefined;
@@ -22,12 +22,15 @@ export class NavbarComponent implements OnInit {
   profile: any;
   defaultAvatar: string = '/assets/img/default-avatar.png';
 
+//title
+  tittle = 'material-test';
+  name: string[] = ['Ximena', 'sebastian', 'Andres', 'andrea', 'xiomara', 'salvador']; //llamado de la api
 
-  title = 'material-test';
-  name: string[] = ['Ximena', 'sebastian', 'Andres', 'andrea', 'xiomara', 'salvador']; //lamado de la api
+  //control
+  controll = new FormControl();
 
-  control = new FormControl();
-  filNames: Observable<string[]> | undefined;
+  //filNames
+  fillNames: Observable<string[]> | undefined;
 
 
   constructor(
