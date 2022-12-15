@@ -11,6 +11,7 @@ import { AuthService } from 'src/app/_services/auth.service';
 })
 export class SignupComponent implements OnInit {
   googleBtnText = 'signup_with';
+  showTerms = false;
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
@@ -41,5 +42,8 @@ export class SignupComponent implements OnInit {
   }
   Login(){
     this.router.navigate(['/login'])
+  }
+  toggleTerms(){
+    this.showTerms = !this.showTerms;
   }
 }

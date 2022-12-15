@@ -59,8 +59,8 @@
                 </mat-form-field>
               </div>
               <div class="row">
-                <mat-radio-group aria-label="Select an option">
-                  <mat-radio-button class="mb-3" value="1" onclick="alert('Los terminos y condiciones del Guide to go están en contrucción, recuerda usar la plataforma de manera respetuosa y detallada para que, con tu experiencia, podamos ayudar a más viajeros a conocer muchos destinos.')">Acepto los Terminos y condiciones </mat-radio-button>
+                <mat-radio-group aria-label="Select an option " class="radioButton">
+                  <mat-radio-button class="mb-3 " value="1" (click) = "toggleTerms()">Acepto los Terminos y condiciones </mat-radio-button>
                 </mat-radio-group>
               </div>
               
@@ -76,4 +76,9 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="terms rounded shadow p-5" [class.active]="showTerms">
+  <p>Recuerda contar tus experiencias de manera respetuosa y amable, así ayudaremos a compartir experiencias</p>
+  <button mat-raised-button class="boton2" (click) = "toggleTerms()">Iniciar Sesión</button>
 </div>
