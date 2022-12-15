@@ -1,66 +1,84 @@
 <div class="pagina vh-100 align-items-center d-flex justify-content-center">
 
-  <div class="login d-flex bg-white rounded justify-content-center">
+  <div class="login shadow p-3 mb-5 d-flex bg-body rounded justify-content-center align-items-center">
 
 
     <div class="grid-item1">
-      <img class="logo1 align-items-center justify-content-center"
-        src="https://res.cloudinary.com/degujt9v4/image/upload/v1669938537/guide_to_go_recursos_-_logo2_prc2pb.png"
-        alt="" width="420px" height="370px">
+      <img class="logo1 align-items-center justify-content-center" src="../../../assets/img/LoginImage-05.png" alt=""
+        width="420px" height="370px">
     </div>
 
     <div class="grid-item2">
       <div>
         <mat-button-toggle-group class="registro-signin mb-4" name="" aria-label="">
-          <mat-button-toggle class="registro justify-content-center d-flex align-items-center" value="bold">
+          <mat-button-toggle class="registro justify-content-center d-flex align-items-center">
             Registrarse
           </mat-button-toggle>
-          <mat-button-toggle class="signin justify-content-center d-flex align-items-center" value="italic">
+          <mat-button-toggle (click)="Login()" class="signin justify-content-center d-flex align-items-center">
             Iniciar sesión
           </mat-button-toggle>
         </mat-button-toggle-group>
 
-        <img class="logo2 align-items-center justify-content-center"
-          src="https://res.cloudinary.com/degujt9v4/image/upload/v1669938537/guide_to_go_recursos_-_logo2_prc2pb.png"
-          alt="" height="60px" width="100px">
+        <img class="logo2 justify-content-center" src="../../../assets/img/logoHorizontal-06.png" alt="" height="22px"
+          width="126px">
 
-      </div>
 
-      <h3 class="row align-items-center justify-content-center">Registrarse</h3>
-      <div class="row justify-content-center align-items-center d-flex">
-        <form class="example-form justify-content-center align-items-center" [formGroup]="form" (ngSubmit)="onSubmit()">
-          <div class="row">
-            <mat-form-field class="example-full-width">
-              <mat-label>Nombre Completo</mat-label>
-              <input matInput placeholder="" value="" formControlName="fullName">
-              <!-- <mat-error>
-          El nombre completo es <strong>requerido!</strong>
-        </mat-error> -->
-            </mat-form-field>
+        <h1 class="Text1 row align-items-center justify-content-center mt-4">Registrarse</h1>
+        <div class="row justify-content-center align-items-center d-flex">
+          <div class="col">
+            <form class=" container example-form justify-content-center align-items-center" [formGroup]="form"
+              (ngSubmit)="onSubmit()">
+              <div class="row">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Nombre Completo</mat-label>
+                  <input matInput placeholder="" value="" formControlName="fullName">
+                </mat-form-field>
+              </div>
+              <div class="row">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Email</mat-label>
+                  <input type="email" matInput placeholder="" value="" formControlName="email">
+                </mat-form-field>
+              </div>
+              <div class="row">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Pais</mat-label>
+                  <input type="Pais" matInput placeholder="" value="" formControlName="pais">
+                </mat-form-field>
+              </div>
+              <div class="row">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Medio de transporte principal</mat-label>
+                  <input type="transporte" matInput placeholder="" value="" formControlName="transporte">
+                </mat-form-field>
+              </div>
+              <div class="row">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Password</mat-label>
+                  <input type="password" matInput placeholder="" value="" formControlName="password">
+                </mat-form-field>
+              </div>
+              <div class="row">
+                <mat-radio-group aria-label="Select an option " class="radioButton">
+                  <mat-radio-button class="mb-3 " value="1" (click) = "toggleTerms()">Acepto los Terminos y condiciones </mat-radio-button>
+                </mat-radio-group>
+              </div>
+              
+              <button mat-raised-button class="boton2">Iniciar Sesión</button>
+            </form>
           </div>
-          <div class="row">
-            <mat-form-field class="example-full-width">
-              <mat-label>Email</mat-label>
-              <input type="email" matInput placeholder="" value="" formControlName="email">
-            </mat-form-field>
-          </div>
-
-          <div class="row">
-            <mat-form-field class="example-full-width">
-              <mat-label>Password</mat-label>
-              <input type="password" matInput placeholder="" value="" formControlName="password">
-            </mat-form-field>
-          </div>
-        </form>
-      </div>
-      <div>
-        <button class="boton2 row align-items-center justify-content-center d-flex" mat-raised-button
-          color="">Registrarse</button>
-      </div>
-      <div class="row my-2 justify-content-center">o</div>
-      <div class="">
-        <app-google-button [googleBtnText]="googleBtnText"
-          class="google align-items-center justify-content-center d-flex"></app-google-button>
+        </div>
+        <div class="row my-2 texto justify-content-center">ó</div>
+        <div class="row">
+          <app-google-button [googleBtnText]="googleBtnText"
+            class="google align-items-center justify-content-center d-flex"></app-google-button>
+        </div>
       </div>
     </div>
   </div>
+</div>
+
+<div class="terms rounded shadow p-5" [class.active]="showTerms">
+  <p>Recuerda contar tus experiencias de manera respetuosa y amable, así ayudaremos a compartir experiencias</p>
+  <button mat-raised-button class="boton2" (click) = "toggleTerms()">Iniciar Sesión</button>
+</div>

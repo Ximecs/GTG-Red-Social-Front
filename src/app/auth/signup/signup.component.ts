@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/_services/auth.service';
 
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -10,6 +11,7 @@ import { AuthService } from 'src/app/_services/auth.service';
 })
 export class SignupComponent implements OnInit {
   googleBtnText = 'signup_with';
+  showTerms = false;
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
@@ -37,5 +39,11 @@ export class SignupComponent implements OnInit {
     } else {
       console.log('Formulario Inválido');
     }
+  }
+  Login(){
+    this.router.navigate(['/login'])
+  }
+  toggleTerms(){
+    this.showTerms = !this.showTerms;
   }
 }

@@ -40,4 +40,7 @@ export class LoginComponent implements OnInit {
       console.log('Formulario no vádido');
     }
   }
+  signUp(){
+    this.router.navigate(['/signup'])
+  }
 }

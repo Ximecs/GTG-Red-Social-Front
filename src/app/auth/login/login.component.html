@@ -1,31 +1,29 @@
 <div class="pagina vh-100 align-items-center d-flex justify-content-center">
 
-  <div class="login shadow p-3 mb-5 d-flex bg-body rounded justify-content-center">
+  <div class="login shadow p-3 mb-5 d-flex bg-body rounded justify-content-center align-items-center">
 
 
-    <div class="grid-item1">
-      <img class="logo1 align-items-center justify-content-center"
-        src="https://res.cloudinary.com/degujt9v4/image/upload/v1669938537/guide_to_go_recursos_-_logo2_prc2pb.png"
-        alt="" width="420px" height="370px">
+    <div class="grid-item1 ">
+      <img class="logo1 align-items-center justify-content-center" src="../../../assets/img/LoginImage-05.png" alt=""
+        width="420px" height="370px">
     </div>
 
     <div class="grid-item2">
       <!-- Botones de registro y signup -->
       <div>
-        <mat-button-toggle-group class="registro-signin" name="fontStyle" aria-label="Font Style">
-          <mat-button-toggle class="registro justify-content-center d-flex align-items-center" value="bold">
+        <mat-button-toggle-group class="registro-signin align-items-center">
+          <mat-button-toggle (click)="signUp()" class="registro justify-content-center d-flex align-items-center">
             Registrarse
           </mat-button-toggle>
-          <mat-button-toggle class="iniciosesion justify-content-center d-flex align-items-center" value="italic">
+          <mat-button-toggle  class="iniciosesion justify-content-center d-flex align-items-center" value="italic">
             Iniciar sesión
-          </mat-button-toggle>
+          </mat-button-toggle> 
         </mat-button-toggle-group>
 
-        <img class="logo2"
-          src="https://res.cloudinary.com/degujt9v4/image/upload/v1669938537/guide_to_go_recursos_-_logo2_prc2pb.png"
-          alt="" height="60px" width="100px">
+        <img class="logo2 justify-content-center" src="../../../assets/img/logoHorizontal-06.png" alt="" height="22px"
+          width="126px">
 
-        <h3 class="row align-items-center justify-content-center mt-3">Login</h3>
+        <h1 class=" Text1 row align-items-center justify-content-center mt-4">Iniciar Sesión</h1>
         <div class="row">
           <div class="col">
             <form [formGroup]="form" (ngSubmit)="onSubmit()">
@@ -45,7 +43,12 @@
             </form>
           </div>
         </div>
-        <div class="row my-2 justify-content-center">o</div>
+        <div class="row my-2 texto justify-content-center">ó</div>
         <div class="row">
-          <app-google-button [googleBtnText]="googleBtnText" class="google align-items-center justify-content-center d-flex"></app-google-button>
+          <app-google-button [googleBtnText]="googleBtnText"
+            class="google align-items-center justify-content-center d-flex"></app-google-button>
         </div>
+      </div>
+    </div>
+  </div>
+</div>

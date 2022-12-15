@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
+import {MatAccordion} from '@angular/material/expansion';
+import { LoadScriptsService } from '../_services/load-scripts.service';
 
 @Component({
   selector: 'app-settings-page',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsPageComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild(MatAccordion) accordion: MatAccordion | undefined;
+  
+  constructor(private _loadScripts:LoadScriptsService) {
+    _loadScripts.load(["show/showPassword"]);
+    console.log("funciona loadScrpts")
+   }
 
   ngOnInit(): void {
   }
 
 }
+

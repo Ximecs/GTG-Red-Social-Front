@@ -14,6 +14,8 @@ from '@abacritt/angularx-social-login';
 import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
 import { GoogleButtonComponent } from './components/google-button/google-button.component';
 
+import {MatRadioModule} from '@angular/material/radio';
+
 @NgModule({
   declarations: [LoginComponent, SignupComponent, GoogleButtonComponent],
   imports: [
@@ -24,7 +26,8 @@ import { GoogleButtonComponent } from './components/google-button/google-button.
     FormsModule,
     ReactiveFormsModule,
     SocialLoginModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatRadioModule
   ],
   providers: [
     {

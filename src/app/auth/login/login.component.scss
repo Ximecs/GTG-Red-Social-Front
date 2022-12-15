@@ -18,37 +18,57 @@ h2 {
 .formulario {
   width: 300px;
   margin-left: 30px;
-  background-color: #fe7b00;
+  background-color: #E66808;
 }
 
 
 .boton2 {
-  background-color: #fe7b00;
+  background-color: #E66808;
+  font-size: 1em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: white;
 }
 
 .iniciosesion {
-  background-color: #fe7b00;
-  width: 90px;
-  font-size: 12px;
-  height: 37px;
+  background-color: #E66808;
+  font-size: 1em;
+  height: 2em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.Text1{
+  font-size: 2em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.example-full-width{
+  font-size: 1em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
-
 .registro {
-  font-size: 12px;
-  width: 80px;
-  height: 37px;
+  font-size: 1em;
+  //width: 80px;
+  height: 2em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 
 .texto {
   margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  height: 1em;
 }
 
 
 
 .grid-item1 {
-  width: 400px;
+  //width: 100em;
+  //height: 400px;
   margin-right: 40px;
 }
 
@@ -63,7 +83,7 @@ h2 {
   }
 
   .login {
-    max-width: 400px;
+    max-width: 300px;
     min-width: 170px;
   }
 
@@ -74,11 +94,15 @@ h2 {
 }
 
 .pagina {
-  background-color: #E68309;
+  background-image: url('../../../assets/img/LoginBG-01.png');
+  background-position: center;
+  background-size: 1000px;
 }
 
 .logo2 {
-  margin-left: 10px;
+  margin-left: 45px;
+  margin-top: 10px;
+  align-items: center;
 }
 
 
